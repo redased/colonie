@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Animator Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#4A90E2",
+            "background-light": "#f2f2f7",
+            "background-dark": "#102216",
+            "text-light-primary": "#1c1c1e",
+            "text-light-secondary": "#8e8e93",
+            "text-dark-primary": "#ffffff",
+            "text-dark-secondary": "#92c9a4",
+            "card-light": "#ffffff",
+            "card-dark": "#1a3824",
+            "icon-bg-light": "#e9f2fd",
+            "icon-bg-dark": "#23482f"
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center justify-start text-text-light-primary dark:text-text-dark-primary">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h2 class="text-text-light-primary dark:text-text-dark-primary text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Profile</h2>
+</div>
+<div class="flex flex-col p-4 space-y-8">
+<!-- Profile Header -->
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32" data-alt="Profile picture of Alex Johnson" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBd_KWYdnBS8vauC9oUabeRucIGOsmg_gxMyMHys6_-dC3WggMeN6Pepryq6LysBsKJEHE-LjuaXVnUo8hWH1wI_T-AEPhb_Epf4LUfrCjx-L-vwiwLPBGeRu3g310DI284PGV9fl9Arja_ITaeK1DeKajLP97L6XaC1eX4vR1XMtQ41DSugRFlTora5xrJg18U0EtThJwx6zSqal0Ar0BkKT0HC8EvZlg-YiRVrk4UpijOEuslGLJgtQWuv8hOc_XFp5TAIPtwDkVu");'></div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-text-light-primary dark:text-text-dark-primary text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Alex Johnson</p>
+<p class="text-primary text-base font-medium leading-normal text-center">Animator</p>
+</div>
+</div>
+<!-- Information List -->
+<div class="flex flex-col gap-2">
+<!-- Email Item -->
+<div class="flex items-center gap-4 bg-card-light dark:bg-card-dark px-4 min-h-[72px] py-2 justify-between rounded-lg">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-icon-bg-light dark:bg-icon-bg-dark shrink-0 size-12">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal line-clamp-1">Email</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal line-clamp-2">alex.johnson@campfun.com</p>
+</div>
+</div>
+</div>
+<!-- Phone Number Item -->
+<div class="flex items-center gap-4 bg-card-light dark:bg-card-dark px-4 min-h-[72px] py-2 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-icon-bg-light dark:bg-icon-bg-dark shrink-0 size-12">
+<span class="material-symbols-outlined">phone</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal line-clamp-1">Phone Number</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal line-clamp-2">(123) 456-7890</p>
+</div>
+</div>
+</div>
+<!-- Assigned Group Item -->
+<div class="flex items-center gap-4 bg-card-light dark:bg-card-dark px-4 min-h-[72px] py-2 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-icon-bg-light dark:bg-icon-bg-dark shrink-0 size-12">
+<span class="material-symbols-outlined">group</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal line-clamp-1">Assigned Group</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal line-clamp-2">The Eagles</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-4 pt-4">
+<button class="flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 text-base font-bold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+<span class="material-symbols-outlined">calendar_month</span>
+          View My Schedule
+        </button>
+<button class="flex items-center justify-center gap-2 rounded-xl bg-transparent px-6 py-4 text-base font-bold text-red-500 hover:bg-red-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500">
+<span class="material-symbols-outlined">logout</span>
+          Log Out
+        </button>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="sticky bottom-0 mt-auto flex justify-around border-t border-t-zinc-200/50 dark:border-t-zinc-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-2">
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg text-text-light-secondary dark:text-text-dark-secondary w-20" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg text-text-light-secondary dark:text-text-dark-secondary w-20" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="text-xs font-medium">Schedule</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg text-text-light-secondary dark:text-text-dark-secondary w-20" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-xs font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg bg-primary/20 text-primary w-20" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-xs font-bold">Profile</span>
+</a>
+</div>
+</div>
+</body></html>

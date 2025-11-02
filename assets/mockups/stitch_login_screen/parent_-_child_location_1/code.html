@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Child's Location Tracker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between absolute top-0 left-0 right-0 z-20 font-display">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-gray-800 dark:text-white text-2xl">arrow_back</span>
+</div>
+<h1 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Olivia's Location</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-gray-800 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-2xl">battery_5_bar</span>
+</button>
+</div>
+</header>
+<!-- Main Content: Map and Overlays -->
+<main class="flex-1 flex flex-col relative">
+<!-- Map Background -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A bird's eye view of a summer camp with lush green trees, a lake, and various cabins." data-location="Sunny Meadows Camp" style='background-image: url("https://placeholder.pics/svg/300");'>
+<!-- Child's Location Pin -->
+<div class="absolute" style="top: 45%; left: 55%;">
+<div class="relative flex flex-col items-center">
+<div class="flex items-center justify-center h-16 w-16 bg-yellow-400/30 rounded-full animate-ping-slow absolute"></div>
+<div class="flex items-center justify-center h-12 w-12 bg-yellow-400 rounded-full border-4 border-white dark:border-background-dark shadow-lg">
+<img alt="Smiling face of a young girl named Olivia" class="h-full w-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAh0W5gzVCu-DTwoSbJXPA6Uts-Ndh4bknNq4N9wh7G88n6C5e3gP-6oDIQYEYPB3ZaUgdIOB_z6k5Ilp864nRX3W69GlBc-Ntj2Ijpap24HG0COdfjSWBb0IkX12MWq6Fwg4CtOZs7dZLs6ZxWuQ-hQzzp-3cgidntgEKH6q_W8HLD2JmK1JDIrVwbxUZ1gkws6ffzpufVY5xuEkGUKzYHwSs0aqhXpJnLwaz0INe99bvBYb3OLwpmPblT-0dv3fcu6SKeDXG9y33"/>
+</div>
+<div class="mt-2 rounded-full bg-black/60 px-3 py-1 text-white text-xs font-medium shadow-md">
+                            Updated 1 min ago
+                        </div>
+</div>
+</div>
+<!-- Parent's Location Pin -->
+<div class="absolute" style="top: 80%; left: 20%;">
+<div class="relative flex items-center justify-center w-5 h-5">
+<div class="absolute h-full w-full rounded-full bg-blue-500/40 animate-pulse"></div>
+<div class="h-3 w-3 rounded-full bg-blue-600 border-2 border-white"></div>
+</div>
+</div>
+</div>
+<!-- Map Controls -->
+<div class="absolute top-24 right-4 flex flex-col items-end gap-3 z-10">
+<div class="flex flex-col gap-0.5 rounded-lg overflow-hidden shadow-lg">
+<button class="flex size-11 items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
+<span class="material-symbols-outlined text-gray-700 dark:text-gray-200 text-2xl">add</span>
+</button>
+<button class="flex size-11 items-center justify-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
+<span class="material-symbols-outlined text-gray-700 dark:text-gray-200 text-2xl">remove</span>
+</button>
+</div>
+</div>
+<!-- Recenter FAB -->
+<div class="absolute bottom-40 right-4 z-10">
+<button class="flex h-14 w-14 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary text-background-dark shadow-lg transition-transform active:scale-95">
+<span class="material-symbols-outlined text-3xl">my_location</span>
+</button>
+</div>
+<!-- Information Card -->
+<div class="absolute bottom-0 left-0 right-0 p-4 z-10 font-display">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-2xl bg-white/80 dark:bg-black/70 backdrop-blur-lg border border-white/20 dark:border-black/20">
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<div class="flex items-center gap-4">
+<img class="h-14 w-14 rounded-full object-cover border-2 border-primary" data-alt="A portrait photo of Olivia, a smiling young girl." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAziUK_pPG1EkAYP5ykjaTfp7ZUK30lVJFPV3qZkIcJqOyeVEkR_ALAKCk3YDYr9I2EDdTCkZhDXG8kkoMdf0F85hNmcoGlRJwkE0E1ZP5RtuSEc0bT2qmois5ZrM7mgsdPY2FMrV4qh7ncn3Em3uBmp_ASJEznGnPBKsJAIfv8WkUz7BU32vV2dSOGA9p-bmpHLFNa1UM9fu0SWLHAlRZIeuUSG4m3JSZgrJBanQgLSwdIyU8z6Nr6LVtJUbdbkURbk2QwFCcmJN6U"/>
+<div class="flex-1">
+<p class="text-gray-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Olivia's Activity</p>
+<p class="text-gray-600 dark:text-gray-300 text-base font-normal leading-normal">Swimming at the lake</p>
+</div>
+</div>
+<div class="mt-2 border-t border-gray-200 dark:border-gray-700 pt-3 flex items-center justify-between">
+<div class="flex flex-col">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Supervising Counselor</p>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal">Mike R.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-background-dark text-sm font-bold leading-normal transition-transform active:scale-95">
+<span>Need Help?</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<style>
+        @keyframes ping-slow {
+            75%, 100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        .animate-ping-slow {
+            animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+    </style>
+</body></html>

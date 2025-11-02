@@ -1,0 +1,8 @@
+{
+  "alwaysThinkingEnabled": true,
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "c8baa0e0ca454721af6df0953d7272bb.t0wB51y88ooR7Hub",
+    "ANTHROPIC_BASE_URL": "https://api.z.ai/api/anthropic",
+    "API_TIMEOUT_MS": "3000000"
+  }
+}

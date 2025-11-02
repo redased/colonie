@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(flutter:*)",
+      "Bash(flutterfire:*)",
+      "Bash(dart pub global activate:*)",
+      "Bash(C:UsersredaAppDataLocalPubCachebinflutterfire.exe configure --project=colonie-f002e)",
+      "Bash(\"C:\\Users\\reda\\AppData\\Local\\Pub\\Cache\\bin\\flutterfire.exe\":*)",
+      "Bash(dart pub global run flutterfire_cli:flutterfire:*)",
+      "Bash(curl:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

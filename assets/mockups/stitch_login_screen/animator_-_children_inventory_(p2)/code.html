@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Animator's Notebook: Child Inventory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4A90E2",
+              "secondary": "#F5A623",
+              "background-light": "#F8F9FA",
+              "background-dark": "#102216",
+              "text-light": "#333333",
+              "text-dark": "#FFFFFF",
+              "border-light": "#E0E0E0",
+              "border-dark": "#4A5568",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<header class="flex flex-col gap-2 p-4 pb-2 bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<div class="flex items-center h-12 justify-between">
+<button class="text-text-light dark:text-text-dark flex size-10 shrink-0 items-center justify-center rounded-full">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+</div>
+<p class="text-text-light dark:text-text-dark tracking-light text-[28px] font-bold leading-tight">Animator's Notebook</p>
+</header>
+<main class="flex-grow flex flex-col px-4">
+<!-- Headline & Body Text -->
+<h2 class="text-text-light dark:text-text-dark tracking-light text-2xl font-bold leading-tight text-left pb-1 pt-4">Inventory for Alex Johnson</h2>
+<p class="text-text-light/80 dark:text-text-dark/80 text-base font-normal leading-normal pb-3">Group: Eagles</p>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-3 py-4">
+<div class="flex gap-6 justify-between">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Step 2 of 2</p>
+</div>
+<div class="rounded-full bg-border-light dark:bg-border-dark/50 h-2">
+<div class="h-2 rounded-full bg-primary" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Accordions for Inventory -->
+<div class="flex flex-col gap-3 pb-4">
+<details class="flex flex-col rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-4 list-none">
+<p class="text-text-light dark:text-text-dark text-lg font-medium leading-normal">Outerwear</p>
+<span class="material-symbols-outlined text-text-light dark:text-text-dark transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="flex flex-col gap-4 pb-4">
+<!-- Inventory Item Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined">weather_snowy</span>
+</div>
+<span class="text-text-light dark:text-text-dark font-medium">Jacket</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-border-light dark:bg-border-dark text-text-light dark:text-text-dark text-xl">-</button>
+<input class="w-12 h-8 text-center bg-transparent border-0 text-text-light dark:text-text-dark font-medium p-0 focus:ring-0" type="text" value="0"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-border-light dark:bg-border-dark text-text-light dark:text-text-dark text-xl">+</button>
+</div>
+</div>
+<!-- Inventory Item Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined">rainy</span>
+</div>
+<span class="text-text-light dark:text-text-dark font-medium">Raincoat</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-border-light dark:bg-border-dark text-text-light dark:text-text-dark text-xl">-</button>
+<input class="w-12 h-8 text-center bg-transparent border-0 text-text-light dark:text-text-dark font-medium p-0 focus:ring-0" type="text" value="0"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-border-light dark:bg-border-dark text-text-light dark:text-text-dark text-xl">+</button>
+</div>
+</div>
+<!-- Inventory Item Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined">styler</span>
+</div>
+<span class="text-text-light dark:text-text-dark font-medium">Sweater</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-border-light dark:bg-border-dark text-text-light dark:text-text-dark text-xl">-</button>
+<input class="w-12 h-8 text-center bg-transparent border-0 text-text-light dark:text-text-dark font-medium p-0 focus:ring-0" type="text" value="0"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-border-light dark:bg-border-dark text-text-light dark:text-text-dark text-xl">+</button>
+</div>
+</div>
+</div>
+</details>
+<details class="flex flex-col rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-4 list-none">
+<p class="text-text-light dark:text-text-dark text-lg font-medium leading-normal">Footwear</p>
+<span class="material-symbols-outlined text-text-light dark:text-text-dark transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="flex flex-col gap-4 pb-4">
+<!-- Inventory Item Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined">sprint</span>
+</div>
+<span class="text-text-light dark:text-text-dark font-medium">Sneakers</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-border-light dark:bg-border-dark text-text-light dark:text-text-dark text-xl">-</button>
+<input class="w-12 h-8 text-center bg-transparent border-0 text-text-light dark:text-text-dark font-medium p-0 focus:ring-0" type="text" value="0"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-border-light dark:bg-border-dark text-text-light dark:text-text-dark text-xl">+</button>
+</div>
+</div>
+<!-- Inventory Item Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined">barefoot</span>
+</div>
+<span class="text-text-light dark:text-text-dark font-medium">Sandals</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-border-light dark:bg-border-dark text-text-light dark:text-text-dark text-xl">-</button>
+<input class="w-12 h-8 text-center bg-transparent border-0 text-text-light dark:text-text-dark font-medium p-0 focus:ring-0" type="text" value="0"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-border-light dark:bg-border-dark text-text-light dark:text-text-dark text-xl">+</button>
+</div>
+</div>
+</div>
+</details>
+<details class="flex flex-col rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-4 list-none">
+<p class="text-text-light dark:text-text-dark text-lg font-medium leading-normal">Accessories</p>
+<span class="material-symbols-outlined text-text-light dark:text-text-dark transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="flex flex-col gap-4 pb-4">
+<!-- Inventory Item Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined">sports_baseball</span>
+</div>
+<span class="text-text-light dark:text-text-dark font-medium">Hat</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-border-light dark:bg-border-dark text-text-light dark:text-text-dark text-xl">-</button>
+<input class="w-12 h-8 text-center bg-transparent border-0 text-text-light dark:text-text-dark font-medium p-0 focus:ring-0" type="text" value="0"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-border-light dark:bg-border-dark text-text-light dark:text-text-dark text-xl">+</button>
+</div>
+</div>
+</div>
+</details>
+</div>
+</main>
+<!-- Bottom Navigation Buttons -->
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark p-4 border-t border-border-light dark:border-border-dark">
+<div class="flex flex-col gap-3">
+<button class="w-full text-white bg-primary font-semibold py-3 px-6 rounded-xl text-lg">Save Inventory</button>
+</div>
+</footer>
+</div>
+</body></html>

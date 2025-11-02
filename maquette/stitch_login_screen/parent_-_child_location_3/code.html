@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Director Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": {
+                            "DEFAULT": "#13ec5b",
+                            "light": "#e7fdf0"
+                        },
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1a2c20",
+                        "text-light": "#101828",
+                        "text-dark": "#f8fafc",
+                        "muted-light": "#667085",
+                        "muted-dark": "#94a3b8",
+                        "border-light": "#eaecf0",
+                        "border-dark": "#334155",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex h-full min-h-screen w-full flex-col">
+<header class="flex shrink-0 items-center justify-between p-4 z-10">
+<button class="flex size-10 items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold">Profile</h1>
+<button class="flex size-10 items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-2xl">more_horiz</span>
+</button>
+</header>
+<main class="flex-1 px-4 pb-8">
+<div class="flex flex-col items-center">
+<div class="flex flex-col items-center gap-4 py-6">
+<div class="relative">
+<img alt="Profile picture of Jordan Carter" class="h-24 w-24 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn9sLnVn9MQwuxzEVMSKAnTA0ADxiGXMxUtOTtWcgwM6mmgUFAPQCCxmWZygKJX7HSuQpU1yizVvc0R_UaWtuG2YQtnveLWn_DEJ4M86eDijoyMilpQv9NXCUa3ka1AJDLjwzbIa-dEHaJSgzYyNq5yofVHXFT1GKdAWSAmgy7t4xpA30FBdFQYJJAjSk5m0-gsD2yr3MUVMt-LAOcEG8FGbxWAe04qChKJbdPANQ9ZCp6hPw1g6K5TpyF5Lz_hOynkvhAwxGCBa7q"/>
+<div class="absolute -bottom-1 -right-1 flex size-8 items-center justify-center rounded-full border-4 border-background-light dark:border-background-dark bg-primary">
+<span class="material-symbols-outlined text-background-dark text-base">star</span>
+</div>
+</div>
+<div class="text-center">
+<p class="text-2xl font-bold">Jordan Carter</p>
+<p class="text-base font-medium text-muted-light dark:text-muted-dark">Director</p>
+</div>
+</div>
+<div class="w-full space-y-6">
+<div class="rounded-xl bg-card-light dark:bg-card-dark p-5 shadow-sm">
+<h2 class="mb-4 text-base font-semibold">Personal Information</h2>
+<div class="space-y-4">
+<div class="flex items-start">
+<span class="material-symbols-outlined mr-4 mt-0.5 text-muted-light dark:text-muted-dark">person</span>
+<div>
+<p class="text-sm text-muted-light dark:text-muted-dark">Last Name</p>
+<p class="font-medium">Carter</p>
+</div>
+</div>
+<div class="flex items-start">
+<span class="material-symbols-outlined mr-4 mt-0.5 text-muted-light dark:text-muted-dark">badge</span>
+<div>
+<p class="text-sm text-muted-light dark:text-muted-dark">First Name</p>
+<p class="font-medium">Jordan</p>
+</div>
+</div>
+<div class="flex items-start">
+<span class="material-symbols-outlined mr-4 mt-0.5 text-muted-light dark:text-muted-dark">cake</span>
+<div>
+<p class="text-sm text-muted-light dark:text-muted-dark">Date of Birth</p>
+<p class="font-medium">August 15, 1995</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-card-light dark:bg-card-dark p-5 shadow-sm">
+<h2 class="mb-4 text-base font-semibold">Contract Details</h2>
+<div class="flex items-center space-x-4">
+<div class="flex size-10 items-center justify-center rounded-full bg-primary-light dark:bg-opacity-20">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+</div>
+<div>
+<p class="text-sm text-muted-light dark:text-muted-dark">Contract Dates</p>
+<p class="font-semibold">June 1, 2024 - August 31, 2024</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-card-light dark:bg-card-dark p-5 shadow-sm">
+<h2 class="mb-4 text-base font-semibold">Diplomas &amp; Certifications</h2>
+<ul class="space-y-3">
+<li class="flex items-center">
+<span class="material-symbols-outlined mr-3 text-primary">school</span>
+<span class="font-medium">First Aid &amp; CPR Certified</span>
+</li>
+<li class="flex items-center">
+<span class="material-symbols-outlined mr-3 text-primary">school</span>
+<span class="font-medium">Camp Director Certificate</span>
+</li>
+<li class="flex items-center">
+<span class="material-symbols-outlined mr-3 text-primary">school</span>
+<span class="font-medium">Child Protection Training</span>
+</li>
+</ul>
+</div>
+<div class="rounded-xl bg-card-light dark:bg-card-dark p-5 shadow-sm">
+<h2 class="mb-4 text-base font-semibold">Camp Experience</h2>
+<ul class="space-y-4 border-l-2 border-border-light dark:border-border-dark pl-6">
+<li class="relative">
+<div class="absolute -left-[34px] top-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary">
+<div class="h-2 w-2 rounded-full bg-background-light dark:bg-background-dark"></div>
+</div>
+<p class="font-semibold">Head Counselor</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Summer 2023</p>
+</li>
+<li class="relative">
+<div class="absolute -left-[34px] top-1 flex h-4 w-4 items-center justify-center rounded-full bg-border-light dark:bg-border-dark">
+<div class="h-2 w-2 rounded-full bg-background-light dark:bg-background-dark"></div>
+</div>
+<p class="font-semibold">Senior Counselor</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Summer 2022</p>
+</li>
+<li class="relative">
+<div class="absolute -left-[34px] top-1 flex h-4 w-4 items-center justify-center rounded-full bg-border-light dark:bg-border-dark">
+<div class="h-2 w-2 rounded-full bg-background-light dark:bg-background-dark"></div>
+</div>
+<p class="font-semibold">Camp Counselor</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Summer 2021</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

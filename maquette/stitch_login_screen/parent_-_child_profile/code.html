@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Child's Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4A90E2",
+                        "secondary": "#F5A623",
+                        "alert": "#D0021B",
+                        "success": "#7ED321",
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#333333",
+                        "text-dark": "#E0E0E0",
+                        "text-muted-light": "#6c757d",
+                        "text-muted-dark": "#9E9E9E",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px",
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-gray-200 dark:border-gray-800">
+<div class="text-text-light dark:text-text-dark flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Child's Profile</h2>
+<div class="flex size-10 shrink-0 items-center"></div> <!-- Spacer -->
+</div>
+<!-- Main Content -->
+<div class="flex flex-col gap-6 p-4">
+<!-- ProfileHeader -->
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32" data-alt="Photo of Alex Johnson" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtDL7HeQInLwtsaafsGuf_vmrMnVb3bo_s9l3bCQ-F3xHufZsZlCYY7VNYWY6I4x0BlhIMlz1mXw762wN2KgAb0gIW2EIAEXihwSfXwykREKJuY6lA-74JvOckLAvPFvTe8cO0c_3mpjqTa_a3TSl_TZay2zj8W9eNjJQY6fhGI-5fCR95sVfjjzjERWpqG0-dL-d7UzVvSvlBQT3ZrqArUJVndJozIPJOXhblQI-SDDIMRIkoOh2q-V1eQ7sC92jFgsrm2FakgTj5");'></div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Alex Johnson</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal text-center">8 years old</p>
+</div>
+</div>
+</div>
+<!-- Card: Camp Wallet -->
+<div class="flex flex-col items-stretch justify-start rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-surface-light dark:bg-surface-dark p-4">
+<div class="flex w-full flex-col items-stretch justify-center gap-2">
+<div class="flex items-center justify-between">
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-medium leading-normal">Camp Wallet</p>
+<span class="material-symbols-outlined text-success">account_balance_wallet</span>
+</div>
+<p class="text-success text-2xl font-bold leading-tight tracking-[-0.015em]">$50.00</p>
+<div class="flex items-center gap-3 justify-between mt-2">
+<p class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal">Remaining Balance</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary text-white text-sm font-bold leading-normal shadow-sm">
+<span class="truncate">Top Up</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section: Medical Info -->
+<div>
+<!-- SectionHeader -->
+<div class="flex items-center gap-2 px-1 pb-2 pt-4">
+<span class="material-symbols-outlined text-alert">medical_services</span>
+<h3 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em]">Medical Info</h3>
+</div>
+<div class="flex flex-col bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<!-- ListItem: Allergy -->
+<div class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between border-b border-gray-200 dark:border-gray-700">
+<div class="flex items-center gap-4">
+<div class="text-alert flex items-center justify-center rounded-full bg-alert/10 shrink-0 size-10">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1">Peanut Allergy</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal line-clamp-2">Known Allergies</p>
+</div>
+</div>
+</div>
+<!-- ListItem: Blood Type -->
+<div class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-text-light dark:text-text-dark flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 shrink-0 size-10">
+<span class="material-symbols-outlined">bloodtype</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1">O+</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal line-clamp-2">Blood Type</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Emergency Contacts -->
+<div>
+<!-- SectionHeader -->
+<div class="flex items-center gap-2 px-1 pb-2 pt-4">
+<span class="material-symbols-outlined text-primary">contacts</span>
+<h3 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em]">Emergency Contacts</h3>
+</div>
+<div class="flex flex-col bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<!-- ListItem: Parent 1 -->
+<div class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between border-b border-gray-200 dark:border-gray-700">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-full bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1">Jane Doe</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal line-clamp-2">Mother</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="text-white flex size-10 items-center justify-center bg-primary rounded-full shadow-sm">
+<span class="material-symbols-outlined">call</span>
+</button>
+</div>
+</div>
+<!-- ListItem: Parent 2 -->
+<div class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-full bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1">John Doe</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal line-clamp-2">Father</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="text-white flex size-10 items-center justify-center bg-primary rounded-full shadow-sm">
+<span class="material-symbols-outlined">call</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

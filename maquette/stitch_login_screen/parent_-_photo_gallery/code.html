@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Camp Photos</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ec5b",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102216",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-gray-200/10">
+<div class="flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined text-gray-900 dark:text-white">arrow_back</span>
+</div>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Camp Photos</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-gray-900 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Segmented Buttons / Child Selector -->
+<div class="flex px-4 py-3 bg-background-light dark:bg-background-dark">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-gray-200 dark:bg-gray-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-white has-[:checked]:dark:bg-gray-900 has-[:checked]:shadow-sm has-[:checked]:text-gray-900 has-[:checked]:dark:text-white text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-colors duration-200">
+<span class="truncate">Liam's Photos</span>
+<input checked="" class="invisible w-0" name="child_selector" type="radio" value="Liam's Photos"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-white has-[:checked]:dark:bg-gray-900 has-[:checked]:shadow-sm has-[:checked]:text-gray-900 has-[:checked]:dark:text-white text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-colors duration-200">
+<span class="truncate">Olivia's Photos</span>
+<input class="invisible w-0" name="child_selector" type="radio" value="Olivia's Photos"/>
+</label>
+</div>
+</div>
+<!-- Section Header -->
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Monday, July 15th</h3>
+<!-- Image Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 p-4 pt-2">
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl" data-alt="Child painting on a canvas outdoors at an easel" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3gyDEFX5EbunL8YJ4G6ArXHFNaPdcPF8K0bN5LWP2Qv950l-NY-Gy7E-PtSGxTSERkYvfMhCsj6Z23LIBp6cXbWxA0kjdRy1Gq8TSlYQywuj_QBwyn0LXApiVu2C5btjPh_R-RfbU2hkRJIUOWNFqMHnmkSavDFMDM0iuLj72YoUWqk9osBKH_G_mQGV_YOWKwfJ_mYWv-lxe3kI02XEydgosoYJdEzymUQjC9ZoFWsV-8854nsvLlMpYbAX7BEoFR3hsYfW3fexQ");'></div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl" data-alt="Group of kids sitting around a campfire telling stories" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBpTle5IAsLH2TB-qM6H1InWdxjE0eFWO-dZsk5_0uEhptEgKJhHHHQ3c98LqvWXbSZNuwZKe2f5pSMZMLOGrl1A_zDw-RuxvLubs54ukP3uI9bRGw0jkdEo4wcEp32smGOaTWx7nFunCPavZ9BQJHy649qtRQte9mRGux5Dgn4Fpj2cPOMbrzRlN-ncIiCc2QH-E2JqjaDSKRJQbqdgPUS1tvvC53RRoJIjK5F1-7mRxyDojAWaykw12H4d7Qo2Hy8Ll32-i7OWmjr");'></div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl" data-alt="Two children in life vests smiling in a canoe on a lake" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABo1fOUr2hbyjdmSlFIKViINiAZDFhJcMaNdOek76o1I4wyNmei8gH6oE6BRYnGbHK4D8PAP2GasBDFOgY01-aZaTHcMXuo61uXB4cVEsdEiFq9UQenxJb_02wUSTLkH9xQPHAWsP_9QnJDBYiv6kNmjm-exyMMdLLPV27cOAmf2hMLxXfpJU79AQW7jeXddjQ7wDnT4xw0cPfgVOOllrAKh5g97AX5yEoN2k6Vsi7JiPWmbQUZpDyyWVj-I9VkeIicpN8HiiZMK3v");'></div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl" data-alt="Close-up of a child's hands working with clay in an arts and crafts session" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACP8D1K9yjDTQGu-q0AE-wH_tZbeplE_V35lIIBbvkk3rXTJmeJ8dZIuron61xh3WM0tvegFeBQVAi_-t3VcB4IfCxvGTUY7x6nMxJkTNiDNlf3Oh3NuwNuXIuQsAkUCYPstrStlB7NPz0-Bl8eLN4tOVEV5AP1SaKlj5sbY6AdXnglm0GLnQj5x0l2zDTBP-m9CLSQdnIclFzD6TGDL8i1zKedknLCugQeyVMmxjE_ynCQGTjNChooA4U_UBlm8LZg3KjMOl-PGPX");'></div>
+</div>
+</div>
+<!-- Section Header -->
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Tuesday, July 16th</h3>
+<!-- Image Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 p-4 pt-2">
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl" data-alt="Children playing soccer on a grassy field" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBC4QmJHZTFVyBkTne9OR6R0wMtySxxB5rxSLFHCczyNPkBfXDlzu_Q0S4B7oqAg4wjPtXYn0u2b94ccwfQPpC6LuU5g-UNPygqB5Fo0qSYQNj5FaQOkqLOhwecPAHo6s4sRfosD7mdIPXqKelR0sSzh0iP-sE3D81goZXYwhcGRCA3iWlICQYPx_h37hE8xJDj6DO9UkVpTYEOfepBTc0CeP4D_TL1GMDkFsgZMB0_3N3HtTkm6vFWIDLCZopLeN-hzfE5eD3Jwr9A");'></div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl" data-alt="Kids laughing and splashing in a swimming pool" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBW9a-xemx-ySVIwLh54kvSu6R_slsapgEwwqAuufBBDRjEN3rBxF-ZDDjfIVTphQG-rR2_jKJtzmhTMTjwI3uOhZBlzYMO1qKP2qld5DYWDCGMhsPuItonacyOdSNQxE7cVPZSg6bciRcD3cinM8ymvqQ4gUdyoPF4QUfo956UGCXRqKWJ1-cSAFg1lncwwr9Nih3okiRVzFPsII2p5qW5t2iw5KRlQbDrb6dwbFn9fXqZQ1NL_I9OjBjuPOE2s2gIPmaTxLSZzBqB");'></div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl" data-alt="A camp counselor teaching a child how to shoot a bow and arrow" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdppFTWBQy-ZQICl6fsprmgmlfbtYDVADLxRfn9a9NqG4UIEO-KD1eD6EE9rNU6Of4azb8YFLIVR12_s_9QmJAbML6jVq2EWkxuV1_qP2dOl0lwTwD0_iZJx5oVySrEEXhNc6D3dzZu4Qpsw8uU-5BmF8yjSMas0Hw-XupWjZ-DHtVVc7IdfFQzKLNhWeA44wwyiJCPc43jb3ErH6leikj0qeNjKj_A84v9M9IrBLJeSt7UWW5eaiktiCnnO9-tHDnT1pmEGs8AU8m");'></div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl" data-alt="Group of kids on a nature hike through a forest" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAnw5mMAek-DHER0HysFvEa9mhNssl-ho94fJ1kDMlxXHuDr8I8n50ZbylF_oo-cpnJJ_rKTW7Mk5g6QchcUaHdZDBiwQsyD05qSf4nbaFYYtPpMLHGaCvJe9fQ9tXh4t4S9iXlP88Kv4DkIpNkiLbGWjh0yVToXi2gXp2ZJp5gx1x4h9YgbtHgCAzDcd_8ZPs8nGgdRoymWScnTADdEAriMhPt-sSeVW_4r-kCqhxoU3EbHsjM7lZx3EYIipJuq6mB4e_a09DDTMQ");'></div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl" data-alt="A child proudly showing off a friendship bracelet they made" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOWTXGzO4Zb68i6U6D2Z4zjSRrIfESGaCSiZ_RfUe2uP4NV6PNGQQfQE3dTytGic4d2mEuyP7fKDvJOGVvMQbf93fYy50y58jjNskp-bA06Y98lyjMKGGwWvqrHr-BPWTRIBl0M4wXUaDBQAbmI-IEeeMftV_Rde5JMwa8i5F_nvojJrPKJTiAeIrvArP93YCdPeyVkglgaEECb4lu_bSx5hCUorvt1ijB5iiQnUmg5Rs_g834fdtGLZ407S3SNp-paFW3cHjKBOWC");'></div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl" data-alt="Children performing a skit on a small stage" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-gW52gNi_enLbvXt-nSYEnO5RYghINyIhSZ0wvtNqthg_I_Q4mjioftIlRF7gxbBc7ZdwEBnxCkp8T1NmOhO16GpDXm9PE18_8_qDhzGen9Jvk3XaZxCAeMbzWyUNz-SmG-PPexct2hg82MljQ7DDVy04hzqmNx2i0l2dpak0uSeN0aTZGgrkV8zLjQDeqSUF--NES0G7X0D6zIdo4XQjNFF3OBj1gmyY1FwbFvy4ayTr5h25-ytAt0RhTIiujDt0S-T3TUyZFj8_");'></div>
+</div>
+</div>
+<div class="h-24"></div> <!-- Spacer for FAB -->
+<!-- Floating Action Button (FAB) -->
+<button class="fixed bottom-6 right-6 flex items-center justify-center h-14 w-14 rounded-full bg-primary text-background-dark shadow-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark transition-transform duration-200 active:scale-95">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</body></html>

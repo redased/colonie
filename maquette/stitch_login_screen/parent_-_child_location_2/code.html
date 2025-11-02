@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Director Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13ec5b",
+            "background-light": "#f6f8f6",
+            "background-dark": "#102216",
+            "surface-light": "#ffffff",
+            "surface-dark": "#1C2D20",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex h-screen w-full flex-col p-6 pt-8">
+<header class="flex items-start justify-between pb-8">
+<div class="flex items-center gap-4">
+<img alt="Director's profile picture" class="h-16 w-16 rounded-full object-cover border-4 border-white dark:border-surface-dark shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAh0W5gzVCu-DTwoSbJXPA6Uts-Ndh4bknNq4N9wh7G88n6C5e3gP-6oDIQYEYPB3ZaUgdIOB_z6k5Ilp864nRX3W69GlBc-Ntj2Ijpap24HG0COdfjSWBb0IkX12MWq6Fwg4CtOZs7dZLs6ZxWuQ-hQzzp-3cgidntgEKH6q_W8HLD2JmK1JDIrVwbxUZ1gkws6ffzpufVY5xuEkGUKzYHwSs0aqhXpJnLwaz0INe99bvBYb3OLwpmPblT-0dv3fcu6SKeDXG9y33"/>
+<div>
+<h1 class="text-2xl font-bold text-gray-900 dark:text-white">Hi, Sarah!</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400">Director</p>
+</div>
+</div>
+<button class="flex size-12 items-center justify-center rounded-full bg-white dark:bg-surface-dark text-gray-600 dark:text-gray-300 shadow-sm">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<main class="flex flex-1 flex-col gap-6">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-white dark:bg-surface-dark p-4 aspect-square shadow-sm">
+<div class="flex size-14 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<p class="text-center text-sm font-semibold text-gray-800 dark:text-gray-200">Manage Staff</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-white dark:bg-surface-dark p-4 aspect-square shadow-sm">
+<div class="flex size-14 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">escalator_warning</span>
+</div>
+<p class="text-center text-sm font-semibold text-gray-800 dark:text-gray-200">Manage Children</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-white dark:bg-surface-dark p-4 aspect-square shadow-sm">
+<div class="flex size-14 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">calendar_month</span>
+</div>
+<p class="text-center text-sm font-semibold text-gray-800 dark:text-gray-200">Activity Schedule</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-white dark:bg-surface-dark p-4 aspect-square shadow-sm">
+<div class="flex size-14 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">emergency</span>
+</div>
+<p class="text-center text-sm font-semibold text-gray-800 dark:text-gray-200">Emergency Protocols</p>
+</div>
+</div>
+<div class="mt-auto flex flex-col gap-4">
+<div class="rounded-xl bg-white dark:bg-surface-dark p-4 shadow-sm">
+<a class="flex items-center text-gray-800 dark:text-gray-200" href="#">
+<span class="material-symbols-outlined mr-4 text-gray-500 dark:text-gray-400">lock</span>
+<span class="flex-1 font-medium">Password Management</span>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500">chevron_right</span>
+</a>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-red-100 dark:bg-red-900/40 py-3 text-red-600 dark:text-red-400 transition-colors hover:bg-red-200 dark:hover:bg-red-900/60">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-bold">Log Out</span>
+</button>
+</div>
+</main>
+</div>
+
+</body></html>

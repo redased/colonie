@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Summer Camp Schedule</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
+<div class="flex-1 pb-24">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 bg-background-light/80 pb-2 pt-4 backdrop-blur-md dark:bg-background-dark/80">
+<div class="flex flex-col gap-2 px-4">
+<div class="flex h-12 items-center justify-between">
+<div class="flex shrink-0 items-center gap-3">
+<div class="aspect-square size-10 rounded-full bg-cover bg-center bg-no-repeat" data-alt="Profile picture of a child named Alex" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3g8MG4SSNeeyU2e4KWtmV5lSnHcKB2tVXccF_DLjg4qm5_1dAR6mzHdF3GgBcdj5wTj4UKGOWeuIa-7OGKCkCFBoos_P5ew0_Mm85_yjZ9Kt26a-MZmIX9C7h9s85_1ABdDxSi_N-2Wm8zta3OR8IwbzvGP5GtuEE_SaQ93zsFwpvD2qjSmyPb7imgnQoL4ID_lVxm0cw-UqaLV9GTY7gHxASC7XxJ53ef30o1stiUTdG6YisAl8if3bZ_xVWtmcKNjsSqrBvt3ay");'></div>
+<p class="text-lg font-bold text-slate-900 dark:text-white">Alex's Schedule</p>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="flex h-12 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-transparent text-base font-bold leading-normal tracking-[0.015em] text-slate-700 dark:text-white">
+<span class="material-symbols-outlined text-2xl">calendar_today</span>
+</button>
+</div>
+</div>
+<p class="text-[28px] font-bold leading-tight text-slate-900 dark:text-white">Tuesday, July 16</p>
+</div>
+</header>
+<!-- Spacer -->
+<div class="h-5"></div>
+<!-- Timeline -->
+<main class="grid grid-cols-[auto_1fr] gap-x-4 px-4">
+<!-- Timeline Event 1: Morning Assembly -->
+<div class="flex flex-col items-center gap-1 pt-3">
+<div class="flex size-10 items-center justify-center rounded-full bg-sky-500/20 text-sky-400">
+<span class="material-symbols-outlined">flag</span>
+</div>
+<div class="h-full w-[2px] grow bg-slate-200 dark:bg-slate-700"></div>
+</div>
+<div class="flex flex-1 flex-col pb-8 pt-3">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">9:00 AM - 9:30 AM</p>
+<p class="text-lg font-bold text-slate-900 dark:text-white">Morning Assembly</p>
+<p class="text-base text-slate-600 dark:text-slate-300">Main Lawn</p>
+</div>
+<!-- Timeline Event 2: Canoeing -->
+<div class="flex flex-col items-center gap-1">
+<div class="h-full w-[2px] grow bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex size-10 items-center justify-center rounded-full bg-teal-500/20 text-teal-400">
+<span class="material-symbols-outlined">kayaking</span>
+</div>
+<div class="h-full w-[2px] grow bg-slate-200 dark:bg-slate-700"></div>
+</div>
+<div class="flex flex-1 flex-col pb-8">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">9:30 AM - 11:00 AM</p>
+<p class="text-lg font-bold text-slate-900 dark:text-white">Canoeing Basics</p>
+<p class="text-base text-slate-600 dark:text-slate-300">Lakefront</p>
+</div>
+<!-- Timeline Event 3: Lunch -->
+<div class="flex flex-col items-center gap-1">
+<div class="h-full w-[2px] grow bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex size-10 items-center justify-center rounded-full bg-orange-500/20 text-orange-400">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div class="h-full w-[2px] grow bg-slate-200 dark:bg-slate-700"></div>
+</div>
+<div class="flex flex-1 flex-col pb-8">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">12:00 PM - 1:00 PM</p>
+<p class="text-lg font-bold text-slate-900 dark:text-white">Lunch</p>
+<p class="text-base text-slate-600 dark:text-slate-300">Dining Hall</p>
+</div>
+<!-- Timeline Event 4: Arts & Crafts (Current Activity) -->
+<div class="flex flex-col items-center gap-1">
+<div class="h-full w-[2px] grow bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex size-10 items-center justify-center rounded-full bg-purple-500/20 text-purple-400">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<div class="h-full w-[2px] grow bg-primary"></div>
+</div>
+<div class="relative -mx-4 flex flex-1 flex-col bg-primary/20 px-4 pb-8">
+<div class="absolute -left-1.5 top-0 h-3 w-3 rounded-full border-4 border-background-light bg-primary dark:border-background-dark"></div>
+<p class="text-sm font-medium text-primary">1:30 PM - 3:00 PM (Now)</p>
+<p class="text-lg font-bold text-slate-900 dark:text-white">Arts &amp; Crafts</p>
+<p class="text-base text-slate-600 dark:text-slate-300">Crafts Cabin</p>
+</div>
+<!-- Timeline Event 5: Campfire -->
+<div class="flex flex-col items-center gap-1">
+<div class="h-full w-[2px] grow bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex size-10 items-center justify-center rounded-full bg-red-500/20 text-red-400">
+<span class="material-symbols-outlined">camping</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col pb-8">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">7:00 PM - 8:00 PM</p>
+<p class="text-lg font-bold text-slate-900 dark:text-white">Campfire Stories</p>
+<p class="text-base text-slate-600 dark:text-slate-300">Fire Pit Circle</p>
+</div>
+</main>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 border-t border-slate-200 bg-background-light/80 backdrop-blur-md dark:border-slate-800 dark:bg-background-dark/80">
+<div class="flex px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">home</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-slate-900 dark:text-white" href="#">
+<div class="flex h-8 items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">calendar_month</span>
+</div>
+<p class="text-xs font-bold leading-normal tracking-[0.015em]">Schedule</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">photo_camera</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Photos</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Profile</p>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CampConnect - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ec5b",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102216",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="flex-grow flex flex-col justify-center items-center p-4">
+<div class="w-full max-w-md mx-auto">
+<div class="flex justify-center mb-8">
+<div class="w-24 h-24 flex items-center justify-center bg-primary/20 rounded-full">
+<span class="material-symbols-outlined text-primary text-5xl">
+                            local_fire_department
+                        </span>
+</div>
+</div>
+<h1 class="text-white tracking-light text-[32px] font-bold leading-tight px-4 text-center pb-8 pt-0">Welcome Back!</h1>
+<div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-white text-base font-medium leading-normal pb-2">Email or Username</p>
+<div class="flex w-full flex-1 items-stretch rounded-xl">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#326744] bg-[#193322] focus:border-primary h-14 placeholder:text-[#92c9a4] p-[15px] rounded-r-none border-r-0 pr-2 text-base font-normal leading-normal" placeholder="Enter your email or username" value=""/>
+<div class="text-[#92c9a4] flex border border-[#326744] bg-[#193322] items-center justify-center pr-[15px] rounded-r-xl border-l-0">
+<span class="material-symbols-outlined">person</span>
+</div>
+</div>
+</label>
+</div>
+<div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-white text-base font-medium leading-normal pb-2">Password</p>
+<div class="flex w-full flex-1 items-stretch rounded-xl">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#326744] bg-[#193322] focus:border-primary h-14 placeholder:text-[#92c9a4] p-[15px] rounded-r-none border-r-0 pr-2 text-base font-normal leading-normal" placeholder="Enter your password" type="password" value=""/>
+<div class="text-[#92c9a4] flex border border-[#326744] bg-[#193322] items-center justify-center pr-[15px] rounded-r-xl border-l-0">
+<span class="material-symbols-outlined">lock</span>
+</div>
+</div>
+</label>
+</div>
+<div class="flex px-4 py-3 mt-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 flex-1 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors duration-300">
+<span class="truncate">Login</span>
+</button>
+</div>
+<div class="text-center px-4 py-3">
+<a class="text-primary/80 hover:text-primary text-sm font-medium" href="#">Forgot Password?</a>
+</div>
+</div>
+</div>
+<div class="w-full h-auto opacity-20">
+<div class="w-full gap-1 overflow-hidden bg-background-dark @[480px]:gap-2 aspect-[2/1] rounded-none flex">
+<div class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1" data-alt="A stylized silhouette of a forest with pine trees under a starry night sky." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDFj4cT61lET9U3v2Z8hKq_bmmG6vbFr7MAn6mWZwXmPpM6EAZ8ds6CCy3iGPOpS7j0EKvgSYHd78lDm3cdkwZ7r4r3U-7WxY98qrXPJ8zSiyNATvC2r6k7IOIleqZtelBkAVyS__yWQtleeBaTpB32TzoUHZmwxzocI3MWclvk6UD6p9iOKtlbPhAc8qOUSDPVvnxoLZg4w4TROkBJj-xWKReSNkqqt4J90WRf2z9mLfn1coLz3f_ZiaxnYkbX36JkdEeQbLyCZAZw"); filter: grayscale(100%) contrast(1.2);'></div>
+</div>
+</div>
+</div>
+</body></html>

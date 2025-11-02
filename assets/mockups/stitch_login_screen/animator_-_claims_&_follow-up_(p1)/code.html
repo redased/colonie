@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Expense Claims</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ec5b",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102216",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-gray-200/10 dark:border-gray-800/50">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-gray-800 dark:text-white text-2xl">menu</span>
+</div>
+<h1 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Expense Claims</h1>
+<div class="flex size-12 shrink-0 items-center justify-end">
+<!-- Placeholder for another icon if needed -->
+</div>
+</header>
+<main class="flex-1">
+<!-- Segmented Buttons -->
+<div class="px-4 py-3">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-gray-200 dark:bg-gray-800/50 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-primary has-[:checked]:shadow-md has-[:checked]:text-black text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-colors">
+<span class="truncate">New Claim</span>
+<input checked="" class="invisible w-0" name="claim-view-toggle" type="radio" value="New Claim"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-primary has-[:checked]:shadow-md has-[:checked]:text-black text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-colors">
+<span class="truncate">My Claims</span>
+<input class="invisible w-0" name="claim-view-toggle" type="radio" value="My Claims"/>
+</label>
+</div>
+</div>
+<!-- Form Section -->
+<div class="px-4 pb-6">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pt-5 pb-3">Submit a New Claim</h2>
+<div class="space-y-4">
+<!-- Claim Title -->
+<label class="flex flex-col">
+<p class="text-gray-800 dark:text-gray-100 text-base font-medium leading-normal pb-2">Claim Title</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800/50 h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal" placeholder="e.g., Art Supplies for Project" value=""/>
+</label>
+<!-- Amount and Date -->
+<div class="flex flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-gray-800 dark:text-gray-100 text-base font-medium leading-normal pb-2">Amount (€)</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800/50 h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal" placeholder="e.g., 25.50" value=""/>
+</label>
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-gray-800 dark:text-gray-100 text-base font-medium leading-normal pb-2">Date of Purchase</p>
+<div class="relative">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800/50 h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] pr-10 text-base font-normal leading-normal" placeholder="Select date" type="date" value=""/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 pointer-events-none">calendar_today</span>
+</div>
+</label>
+</div>
+<!-- Description -->
+<label class="flex flex-col">
+<p class="text-gray-800 dark:text-gray-100 text-base font-medium leading-normal pb-2">Description</p>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800/50 min-h-28 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal" placeholder="Add a brief justification for the expense..."></textarea>
+</label>
+<!-- Receipt Uploader -->
+<div>
+<p class="text-gray-800 dark:text-gray-100 text-base font-medium leading-normal pb-2">Receipts</p>
+<div class="flex flex-col items-center justify-center w-full p-6 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800/50 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">upload_file</span>
+<p class="text-base font-semibold text-gray-800 dark:text-gray-200">Attach Receipt(s)</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Tap to upload files</p>
+</div>
+</div>
+<!-- Thumbnails for uploaded images (example) -->
+<div class="grid grid-cols-3 gap-3 pt-2">
+<div class="relative aspect-square rounded-lg overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="A receipt for office supplies laid out on a wooden table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHEmF5YOIke_1qxbDqacsfvjM2u9Z7ektXGijK0Hb90GwcTDc7DCiHTtyYo6LOlaf5eAP1QuOjKkeLtmEIPUd13EXIgRad0ciTUfL7z4mYOjHNkN1Jnc3d0f0t1Jt1ZTvmwWHTZTTP_xtv4xMFHGIMgujnf0vWbhrUUKZEF5w4PrZhK51lmSndjt2j7GeWVnClsrC3VTJVkzK7QQnSPjGn-1oDJoknqcit2cWTwk8CZUozKfb4-9_x4A63_4mVqFwZp68qffk-BNXv"/>
+<button class="absolute top-1 right-1 flex items-center justify-center size-6 bg-black/50 rounded-full text-white">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<div class="relative aspect-square rounded-lg overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="A close-up shot of a cash register receipt showing itemized purchases." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd-7IIGpwgalhxSeEXNu9GUes2ocNgJpScbBGJgYY3Ff_FaaNn6qeWP0dChFcpD1ZPcRrN_6ChPqITOye9L6ls-Bg3loxZiiDX-KdpzU7P1ZH2YJdQaNvkVu-lkWf-N0JXKtlpfEt763T1uiMtbwtkdR8zva7U9I6KWJV-pQfryoLndGvsX5zq4Ju_TDWwnUqWtWnbzHdFsuot2LfiGil9VDyucndMDQQSB4uX51cA8-8Mdv0BjnMcggh9ZoFxG4wJtkE7JDS5S008"/>
+<button class="absolute top-1 right-1 flex items-center justify-center size-6 bg-black/50 rounded-full text-white">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CTA Button -->
+<div class="pt-8 pb-4">
+<button class="flex w-full items-center justify-center rounded-xl bg-primary px-6 py-4 text-center text-base font-bold text-black shadow-sm transition-transform active:scale-95">Submit Claim</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

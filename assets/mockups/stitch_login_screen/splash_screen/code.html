@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CampConnect Splash Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4A90E2", // Vibrant Blue
+              "secondary": "#F5A623", // Sunny Yellow
+              "tertiary": "#7ED321", // Earthy Green
+              "background-light": "#f0f8ff", // Light Sky Blue
+              "background-dark": "#102216", // Retaining a dark mode option
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            animation: {
+              'fade-in-scale-up': 'fadeInScaleUp 1.5s ease-out forwards',
+            },
+            keyframes: {
+              fadeInScaleUp: {
+                '0%': { opacity: '0', transform: 'scale(0.9)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body>
+<div class="relative flex h-[100svh] w-full flex-col bg-background-light dark:bg-background-dark font-display group/design-root overflow-hidden">
+<div class="flex flex-col items-center justify-center flex-grow p-6 animate-fade-in-scale-up">
+<!-- App Logo: A stylized pine tree and sun -->
+<div class="relative w-40 h-40 mb-6">
+<div class="absolute inset-0 flex items-center justify-center">
+<svg fill="none" height="160" viewbox="0 0 160 160" width="160" xmlns="http://www.w3.org/2000/svg">
+<!-- Sun -->
+<circle cx="80" cy="80" fill="#F5A623" r="60"></circle>
+<!-- Pine Tree -->
+<path d="M80 50L110 110H50L80 50Z" fill="#7ED321"></path>
+<path d="M85 100H75V120H85V100Z" fill="#A0522D"></path> <!-- Redwood brown trunk -->
+</svg>
+</div>
+</div>
+<!-- App Name Text -->
+<h1 class="text-[#2c5b8b] dark:text-white tracking-tight text-[40px] font-extrabold leading-tight text-center">CampConnect</h1>
+<!-- Tagline -->
+<p class="text-[#3e7ec1] dark:text-gray-300 text-lg font-normal leading-normal mt-2 text-center">Your Summer Adventure Starts Here!</p>
+</div>
+<!-- Optional Loading Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center justify-center space-x-2">
+<div class="h-2 w-2 bg-primary rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+<div class="h-2 w-2 bg-primary rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+<div class="h-2 w-2 bg-primary rounded-full animate-bounce"></div>
+</div>
+</div>
+</body></html>
